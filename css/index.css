@@ -6,7 +6,6 @@
 
 
 p{
-    font-family: 微软雅黑;
     text-align: center;
 }
 
@@ -146,7 +145,7 @@ header{
         font-weight: bold;
         margin: auto 0;
         font-size: 30px;
-        font-family: FZShuTI;
+        font-family: KaiTi;
         text-shadow: 1px 1px 0.5px #FFF;
     }
 }
@@ -162,7 +161,7 @@ header{
         font-weight: bold;
         margin: auto 0;
         font-size: 44px;
-        font-family: FZShuTI;
+        font-family: KaiTi;
         text-shadow: 1px 1px 0.5px #FFF;
     }
 }
@@ -178,7 +177,7 @@ header{
         font-weight: bold;
         margin: auto 0;
         font-size: 64px;
-        font-family: FZShuTI;
+        font-family: KaiTi;
         text-shadow: 1px 1px 0.5px #FFF;
     }
 }
