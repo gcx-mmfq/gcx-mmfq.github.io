@@ -45,11 +45,34 @@ header{
     width: 100%;
 }
 
-.xinghai{
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+@media (max-width:767px){
+    .xinghai{
+        width: 100%;
+        height: auto;
+        background-image:url("../img/星海.jpg");
+        min-height: 300px;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+    }
+}
+
+@media (min-width:768px) and (max-width:1199px){
+    .xinghai{
+        width: 100%;
+        height: auto;
+        background-image:url("../img/星海.jpg");
+        min-height: 560px;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+    }
+}
+
+@media (min-width:1200px){
+    .xinghai{
+        width: 100%;
+        height: auto;
+        background-image:url("../img/星海.jpg");
+        min-height: 770px;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+    }
 }
 
 @media (max-width:767px){
@@ -198,26 +221,32 @@ header{
         width: 55%;
         font-size: clamp(10px,1em,16px);
         font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #FFF;
+        text-shadow: 1px 1px 0.5px #6e6e6e;
     }
 }
 
 @media (min-width:768px) and (max-width:1199px){
     .jlsr{
         position: absolute;
-        top: 26%;
+        top: 33%;
         left: 50%;
         transform: translateX(-50%);
-        width: 55%;
+        width: 40%;
+        font-size: clamp(10px,2em,30px);
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #6e6e6e;
     }
 }
 
 @media (min-width:1200px){
     .jlsr{
         position: absolute;
-        top: 26%;
+        top: 70%;
         left: 50%;
         transform: translateX(-50%);
-        width: 55%;
+        width: 31%;
+        font-size: clamp(10px,2em,30px);
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #6e6e6e;
     }
 }
