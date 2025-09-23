@@ -97,10 +97,11 @@ header{
 @media (max-width:767px){
     .za-world{
         position: absolute;
-        top: 20%;
-        left: 25%;
-        width: 50%;
-        height: 50px;
+        top: 21%;
+        left: 18%;
+        width: 64%;
+        height: auto;
+        border-radius: 10px;
         font-size: 16px;
         font-weight: bold;
         text-shadow: 2px 2px 1px #807d7d;
@@ -111,11 +112,13 @@ header{
     .za-world{
         position: absolute;
         top: 28%;
-        left: 25%;
-        width: 50%;
-        height: 70px;
+        left: 18%;
+        width: 64%;
+        height: auto;
+        border-radius: 10px;
         font-size: 30px;
         font-weight: bold;
+        text-shadow: 2px 2px 1px #807d7d;
     }
 }
 
@@ -123,11 +126,13 @@ header{
     .za-world{
         position: absolute;
         top: 60%;
-        left: 25%;
-        width: 50%;
-        height: 100px;
+        left: 18%;
+        width: 64%;
+        height: auto;
+        border-radius: 10px;
         font-size: 40px;
         font-weight: bold;
+        text-shadow: 2px 2px 1px #807d7d;
     }
 }
 
@@ -139,7 +144,7 @@ header{
 @media (max-width:767px){
     .xcl{
         position: absolute;
-        top: 16%;
+        top: 15%;
         left: 25%;
         width: 50%;
         height: 50px;
@@ -155,7 +160,7 @@ header{
 @media (min-width:768px) and (max-width:1199px){
     .xcl{
         position: absolute;
-        top: 24%;
+        top: 23%;
         left: 25%;
         width: 50%;
         height: 70px;
@@ -171,7 +176,7 @@ header{
 @media (min-width:1200px){
     .xcl{
         position: absolute;
-        top: 53%;
+        top: 52%;
         left: 25%;
         width: 50%;
         height: 100px;
@@ -181,5 +186,38 @@ header{
         font-size: 64px;
         font-family: KaiTi;
         text-shadow: 1px 1px 0.5px #FFF;
+    }
+}
+
+@media (max-width:767px){
+    .jlsr{
+        position: absolute;
+        top: 26%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 55%;
+        font-size: clamp(10px,1em,16px);
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #FFF;
+    }
+}
+
+@media (min-width:768px) and (max-width:1199px){
+    .jlsr{
+        position: absolute;
+        top: 26%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 55%;
+    }
+}
+
+@media (min-width:1200px){
+    .jlsr{
+        position: absolute;
+        top: 26%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 55%;
     }
 }

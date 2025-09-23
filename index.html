@@ -20,40 +20,69 @@
         <span class="minutes">0</span>分
         <span class="seconds">0</span>秒
     </div>
+    <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
+    
 </body>
 <script>
-    const startDate = new Date("2023-7-1 00:00:00");
-    
-    // 获取DOM元素
-    let yearsEl = document.querySelector(".years");
-    let monthsEl = document.querySelector(".month");
-    let daysEl = document.querySelector(".day");
-    let hoursEl = document.querySelector(".hours");
-    let minutesEl = document.querySelector(".minutes");
-    let secondsEl = document.querySelector(".seconds");
-    
+    const startDate = new Date("2023-7-1 00:00:00")
+    let yearsEl = document.querySelector(".years")
+    let monthsEl = document.querySelector(".month")
+    let daysEl = document.querySelector(".day")
+    let hoursEl = document.querySelector(".hours")
+    let minutesEl = document.querySelector(".minutes")
+    let secondsEl = document.querySelector(".seconds")
+
     function calculateTime() {
-        const now = new Date();
-        const timeDiff = now - startDate;
-        const totalSeconds = Math.floor(timeDiff / 1000);
-        const totalMinutes = Math.floor(totalSeconds / 60);
-        const totalHours = Math.floor(totalMinutes / 60);
-        const totalDays = Math.floor(totalHours / 24);
-        const totalMonths = Math.floor(totalDays / 30.44);
-        const totalYears = Math.floor(totalMonths / 12);
-        const remainingMonths = totalMonths % 12;
-        const remainingDays = totalDays % 30.44;
-        const remainingHours = totalHours % 24;
-        const remainingMinutes = totalMinutes % 60;
-        const remainingSeconds = totalSeconds % 60;
-        yearsEl.textContent = totalYears;
-        monthsEl.textContent = Math.floor(remainingMonths);
-        daysEl.textContent = Math.floor(remainingDays);
-        hoursEl.textContent = String(remainingHours).padStart(2, '0');
-        minutesEl.textContent = String(remainingMinutes).padStart(2, '0');
-        secondsEl.textContent = String(remainingSeconds).padStart(2, '0');
+        const now = new Date()
+        const timeDiff = now - startDate
+        const totalSeconds = Math.floor(timeDiff / 1000)
+        const totalMinutes = Math.floor(totalSeconds / 60)
+        const totalHours = Math.floor(totalMinutes / 60)
+        const totalDays = Math.floor(totalHours / 24)
+        const totalMonths = Math.floor(totalDays / 30.44)
+        const totalYears = Math.floor(totalMonths / 12)
+        const remainingMonths = totalMonths % 12
+        const remainingDays = totalDays % 30.44
+        const remainingHours = totalHours % 24
+        const remainingMinutes = totalMinutes % 60
+        const remainingSeconds = totalSeconds % 60
+        yearsEl.textContent = totalYears
+        monthsEl.textContent = Math.floor(remainingMonths)
+        daysEl.textContent = Math.floor(remainingDays)
+        hoursEl.textContent = String(remainingHours).padStart(2, '0')
+        minutesEl.textContent = String(remainingMinutes).padStart(2, '0')
+        secondsEl.textContent = String(remainingSeconds).padStart(2, '0')
     }
-    calculateTime();
-    const timer = setInterval(calculateTime, 1000);
+    calculateTime()
+    const timer = setInterval(calculateTime, 1000)
+
+    let sr = document.querySelector(".sr")
+    let diffsr
+    const totalyear = new Date()
+    let startsryear = totalyear.getFullYear()
+    let startsrtime = new Date(startsryear,7,29)
+    const now = new Date()
+    if (now>startsrtime){
+        startsrtime=new Date(startsryear+1,7,29)
+    }
+    function srtime() {
+        const now = new Date()
+        if(now<=startsrtime){
+            diffsr=startsrtime-now
+            console.log(diffsr)
+        }
+        else{
+            diffsr=startsrtime-now
+            console.log(diffsr)
+        }
+        
+        const srSeconds = Math.floor(diffsr / 1000)
+        const srMinutes = Math.floor(srSeconds / 60)
+        const srHours = Math.floor(srMinutes / 60)
+        const srDays = Math.floor(srHours / 24)
+        sr.textContent = srDays
+    }
+    srtime()
+    const timesr = setInterval(srtime, 86400000)
 </script>
 </html>
