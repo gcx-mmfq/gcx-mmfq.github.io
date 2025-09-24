@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <title>哦~</title>
 </head>
 <body>
@@ -21,7 +24,11 @@
         <span class="seconds">0</span>秒
     </div>
     <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
-    
+    <div class="body">
+        <p>日历:<input type="text" id="datepicker"></p>
+        
+
+    </div>
 </body>
 <script>
     const startDate = new Date("2023-7-1 00:00:00")
@@ -84,5 +91,44 @@
     }
     srtime()
     const timesr = setInterval(srtime, 86400000)
+
+    const holidays=[
+        new Date(startsryear,0,1),      /* 元旦 */
+        new Date(startsryear,9,1),     /* 国庆 */
+        new Date(startsryear,9,2),
+        new Date(startsryear,9,3),
+        new Date(startsryear,9,4),
+        new Date(startsryear,9,5),
+        new Date(startsryear,9,6),
+        new Date(startsryear,9,7),
+        new Date(startsryear,4,1),     /* 劳动 */
+        new Date(startsryear,4,2),
+        new Date(startsryear,4,3),
+        new Date(startsryear,4,4),
+        new Date(startsryear,4,5)
+    ]
+    $(document).ready(function() {
+        $("#datepicker").datepicker({
+            beforeShowDay: function(date){
+                const isholiday = holidays.some(holiday =>
+                    date.getFullYear() === holiday.getFullYear() &&
+                    date.getMonth() === holiday.getMonth() &&
+                    date.getDate() === holiday.getDate()
+                )
+
+                const isbirthday = 
+                    date.getMonth() === startsrtime.getMonth() &&
+                    date.getDate() === startsrtime.getDate();
+
+                if(isholiday){
+                    return[true,"holidays","节假日"]
+                }else if(isbirthday){
+                    return[true,"birthday","生日"]
+                }
+
+                return[true,"",""]
+            }
+        });
+    });
 </script>
 </html>
