@@ -252,7 +252,7 @@ header{
         top: 23vh;
         left: 50%;
         transform: translateX(-50%);
-        font-size: clamp(10px,1em,15px);
+        font-size: clamp(1px,2vh,15px);
         font-family: KaiTi;
         text-shadow: 1px 1px 0.5px #6e6e6e;
     }
@@ -397,18 +397,18 @@ header{
 
 .rili{
     margin: 3px 0 0 0;
-    font-size: clamp(15px,4vw,25px);
+    font-size: clamp(15px,2vh,25px);
 }
 
 .tongzhik{
     margin: 5px 10px 3px 10px;
-    font-size: clamp(15px,5vw,25px);
+    font-size: clamp(15px,3vh,25px);
     white-space: pre-line; 
 }
 
 .tongzhik.holiday{
     font-family: 华文行楷;
-    font-size: 6vw;
+    font-size: 3vw;
     text-shadow: 1px 1px 1px #ffffff;
     white-space: pre-line; 
 }
@@ -418,6 +418,6 @@ header{
     color: transparent;
     background-clip: text;
     font-family: 华文行楷;
-    font-size: 6vw;
+    font-size: 3vh;
     white-space: pre-line; 
 }
