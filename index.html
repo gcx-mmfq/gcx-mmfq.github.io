@@ -25,7 +25,7 @@
     </div>
     <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
     <div class="body">
-        <p class="rili">日历:<input type="text" id="datepicker"></p>
+        <p class="rili">日历:<input type="text" id="datepicker" readonly></p>
         <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
 
     </div>
@@ -124,11 +124,6 @@
 
     $(document).ready(function() {
         $("#datepicker").datepicker({
-
-            beforeShow: function() {
-                $(this).blur();
-            },
-
             beforeShowDay: function(date){
                 const holiday = isHoliday(date);
                 const isbirthday = isBirthday(date);
@@ -146,7 +141,6 @@
                 const holiday = isHoliday(selectedDate)
                 const birthday = isBirthday(selectedDate)
                 const tongzhik = $('.tongzhik')
-                $(this).blur();
                 tongzhik.removeClass("holiday birthday")
                 if(holiday){
 
@@ -166,12 +160,6 @@
                 }else{
                     tongzhik.text(`${tongzhiwb}`)
                 }
-            }
-        });
-        $(document).click(function(e) {
-            if(!$(e.target).closest('#datepicker, .ui-datepicker').length) {
-                $("#datepicker").datepicker("hide");
-                $("#datepicker").blur();
             }
         });
     });

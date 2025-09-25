@@ -324,22 +324,30 @@ header{
         box-shadow: 2px 2px 2px #c7c7c7;
     }
 }
-
-#datepicker{
-    border-radius: 1vh;
-    border: 1px skyblue solid;
-    padding: 0 0 0 4px;
-    width: 10vh;
-    height: 2vh;
+@media (max-width:767px){
+    #datepicker{
+        border-radius: 1vh;
+        border: 1px skyblue solid;
+        padding: 0 0 0 4px;
+        width: 12vh;
+        height: 3vh;
+        font-size: 2vh;
+    }
 }
+
 
 .ui-datepicker {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 10px;
+    position: absolute !important;
+    z-index: 1000 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-top: 10px !important;
 }
- 
+
 /* 月份标题 */
 .ui-datepicker-header {
     background-color: #4a90e2;
@@ -408,7 +416,7 @@ header{
 
 .tongzhik.holiday{
     font-family: 华文行楷;
-    font-size: 3vw;
+    font-size: 3vh;
     text-shadow: 1px 1px 1px #ffffff;
     white-space: pre-line; 
 }
