@@ -123,7 +123,9 @@
     }
 
     $(document).ready(function() {
-        $("#datepicker").datepicker({
+        const $datepicker = $("#datepicker").datepicker({
+            defaultDate: new Date(),
+            dateFormat: "yy-mm-dd",
             beforeShowDay: function(date){
                 const holiday = isHoliday(date);
                 const isbirthday = isBirthday(date);
@@ -152,7 +154,7 @@
 
                 }else if(birthday){
 
-                    tongzhik.text(`今天是你的生日哦！！！\n🎂🎂🎂`).addClass("birthday")
+                    tongzhik.text(`这天是你的生日哦！！！\n🎂🎂🎂`).addClass("birthday")
 
                     setTimeout(() => {
                         tongzhik.removeClass('birthday').text(`${tongzhiwb}`);
@@ -162,6 +164,9 @@
                 }
             }
         });
+        const today = new Date();
+        const formattedToday = $.datepicker.formatDate("yy-mm-dd", today);
+        $datepicker.val(formattedToday);
     });
 </script>
 </html>
