@@ -295,24 +295,38 @@ header{
 
 @media (min-width:768px) and (max-width:1199px){
     .body{
-
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
         min-height: 100px;
-        background-color: rgba(228, 184, 213, 0.2);
-        
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
     }
 }
 
 @media (min-width:1200px){
     .body{
-        
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
         min-height: 100px;
-        background-color: rgba(228, 184, 213, 0.2);
-
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
     }
 }
 
 #datepicker{
+    border-radius: 1vh;
+    border: 1px skyblue solid;
+    padding: 0 0 0 4px;
     width: 8vh;
+    height: 2vh;
 }
 
 .ui-datepicker {
@@ -375,5 +389,31 @@ header{
 .ui-datepicker td a:hover {
     background-color: #e1f5fe;
     color: #0288d1;
- }
+}
 
+.rili{
+    margin: 3px 0 0 0;
+    font-size: clamp(15px,4vw,25px);
+}
+
+.tongzhik{
+    margin: 5px 10px 3px 10px;
+    font-size: clamp(15px,5vw,25px);
+    white-space: pre-line; 
+}
+
+.tongzhik.holiday{
+    font-family: 华文行楷;
+    font-size: 6vw;
+    text-shadow: 1px 1px 1px #ffffff;
+    white-space: pre-line; 
+}
+
+.tongzhik.birthday{
+    background-image: linear-gradient(to right, #c03d3d , #ff0055);
+    color: transparent;
+    background-clip: text;
+    font-family: 华文行楷;
+    font-size: 6vw;
+    white-space: pre-line; 
+}

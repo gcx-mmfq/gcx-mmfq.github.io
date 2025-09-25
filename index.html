@@ -14,7 +14,7 @@
         <div class="xinghai"></div>
         <div class="tou"></div>
     </header>
-    <p class="xcl">相处了:</p>
+    <p class="xcl">我们相处了:</p>
     <div class="za-world">
         <span class="years">0</span>年
         <span class="month">0</span>月
@@ -25,8 +25,8 @@
     </div>
     <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
     <div class="body">
-        <p>日历:<input type="text" id="datepicker"></p>
-        
+        <p class="rili">日历:<input type="text" id="datepicker"></p>
+        <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
 
     </div>
 </body>
@@ -38,6 +38,7 @@
     let hoursEl = document.querySelector(".hours")
     let minutesEl = document.querySelector(".minutes")
     let secondsEl = document.querySelector(".seconds")
+    const tongzhiwb = document.querySelector(".tongzhik").textContent
 
     function calculateTime() {
         const now = new Date()
@@ -76,11 +77,9 @@
         const now = new Date()
         if(now<=startsrtime){
             diffsr=startsrtime-now
-            console.log(diffsr)
         }
         else{
             diffsr=startsrtime-now
-            console.log(diffsr)
         }
         
         const srSeconds = Math.floor(diffsr / 1000)
@@ -92,41 +91,74 @@
     srtime()
     const timesr = setInterval(srtime, 86400000)
 
-    const holidays=[
-        new Date(startsryear,0,1),      /* 元旦 */
-        new Date(startsryear,9,1),     /* 国庆 */
-        new Date(startsryear,9,2),
-        new Date(startsryear,9,3),
-        new Date(startsryear,9,4),
-        new Date(startsryear,9,5),
-        new Date(startsryear,9,6),
-        new Date(startsryear,9,7),
-        new Date(startsryear,4,1),     /* 劳动 */
-        new Date(startsryear,4,2),
-        new Date(startsryear,4,3),
-        new Date(startsryear,4,4),
-        new Date(startsryear,4,5)
+    const holidays = [
+        {date: new Date(startsryear,0,1), name: "元旦"},
+        {date: new Date(startsryear,9,1), name: "国庆节"},
+        {date: new Date(startsryear,9,2), name: "国庆节"},
+        {date: new Date(startsryear,9,3), name: "国庆节"},
+        {date: new Date(startsryear,9,4), name: "国庆节"},
+        {date: new Date(startsryear,9,5), name: "国庆节"},
+        {date: new Date(startsryear,9,6), name: "国庆节"},
+        {date: new Date(startsryear,9,7), name: "国庆节"},
+        {date: new Date(startsryear,4,1), name: "劳动节"},
+        {date: new Date(startsryear,4,2), name: "劳动节"},
+        {date: new Date(startsryear,4,3), name: "劳动节"},
+        {date: new Date(startsryear,4,4), name: "劳动节"},
+        {date: new Date(startsryear,4,5), name: "劳动节"}
     ]
+    
+    // 检查日期是否为节假日并返回名称
+    function isHoliday(date) {
+        return holidays.find(holiday =>
+            date.getFullYear() === holiday.date.getFullYear() &&
+            date.getMonth() === holiday.date.getMonth() &&
+            date.getDate() === holiday.date.getDate()
+        );
+    }
+    
+    // 检查日期是否为生日
+    function isBirthday(date) {
+        return date.getMonth() === startsrtime.getMonth() &&
+               date.getDate() === startsrtime.getDate();
+    }
+
     $(document).ready(function() {
         $("#datepicker").datepicker({
             beforeShowDay: function(date){
-                const isholiday = holidays.some(holiday =>
-                    date.getFullYear() === holiday.getFullYear() &&
-                    date.getMonth() === holiday.getMonth() &&
-                    date.getDate() === holiday.getDate()
-                )
+                const holiday = isHoliday(date);
+                const isbirthday = isBirthday(date);
 
-                const isbirthday = 
-                    date.getMonth() === startsrtime.getMonth() &&
-                    date.getDate() === startsrtime.getDate();
-
-                if(isholiday){
-                    return[true,"holidays","节假日"]
+                if(holiday){
+                    return[true,"holidays",holiday.name];
                 }else if(isbirthday){
-                    return[true,"birthday","生日"]
+                    return[true,"birthday","生日"];
                 }
 
-                return[true,"",""]
+                return[true,"",""];
+            },
+            onSelect:function(dateText,inst){
+                const selectedDate = $(this).datepicker('getDate')
+                const holiday = isHoliday(selectedDate)
+                const birthday = isBirthday(selectedDate)
+                const tongzhik = $('.tongzhik')
+                console.log(selectedDate)
+                tongzhik.removeClass("holiday birthday")
+                if(holiday){
+
+                    tongzhik.text(`这天是${holiday.name}！！！\n😊😊😊`).addClass("holiday")
+
+                    setTimeout(() => {
+                        tongzhik.removeClass('holiday').text(`${tongzhiwb}`);
+                    }, 7000);
+
+                }else if(birthday){
+
+                    tongzhik.text(`今天是你的生日哦！！！\n🎂🎂🎂`).addClass("birthday")
+
+                    setTimeout(() => {
+                        tongzhik.removeClass('birthday').text(`${tongzhiwb}`);
+                    }, 7000);
+                }
             }
         });
     });
