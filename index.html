@@ -27,8 +27,33 @@
     <div class="body">
         <p class="rili">日历:<input type="text" id="datepicker" readonly></p>
         <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
-
     </div>
+    <div class="tzck">
+
+        <div class="bg">
+            <table>
+                <thead>
+                    <tr>
+                        <td><a href="">泥地照片</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">窝地照片</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">3</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">4</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="zck">
+            
+        </div>
+    </div>
+    
 </body>
 <script>
     const startDate = new Date("2023-7-1 00:00:00")
@@ -167,6 +192,20 @@
         const today = new Date();
         const formattedToday = $.datepicker.formatDate("yy-mm-dd", today);
         $datepicker.val(formattedToday);
+
+        const LinkContents ={
+            "泥地照片":'<img src="./img/我来啦.jpg" style="position: absolute;left: 1vh;top: 1vh;width: 30%;border-radius: 10px;"><img src="./img/()就多().jpg" style="position: absolute;right: 1vh;top: 1vh;width: 60%;border-radius: 10px"><img src="./img/我真的会蟹.jpg" style="position: absolute;left: 1vh;bottom: 1vh;width: 20%;border-radius: 10px">',
+            "窝地照片":"2",
+            "3":"3",
+            "4":"4"
+        }
+
+        $(".bg table a").on("click",function(e){
+            e.preventDefault()
+            const linkText = $(this).text()
+            const content = LinkContents[linkText]
+            $('.zck').html(`<div style="padding:10px">${content}</div>`)
+        })
     });
 </script>
 </html>
