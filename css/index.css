@@ -436,14 +436,14 @@ header{
     transform: translateX(-50%);
     display: flex;
     width: 80%;
+    height: 40vh;
 }
 
 .bg{
     position: absolute;
-    
     width: 20%;
     height: 20vh;
-    border-radius: 10px;
+    border-radius: 10px 0 0 0;
     background-color: rgba(228, 184, 213, 0.5);
     box-shadow: 2px 2px 2px #c7c7c7;
 }
@@ -457,16 +457,30 @@ header{
 }
 
 .bg table thead tr td a{
-    font-size: clamp(10px,1.5vh,1.5vh);
+    font-size: clamp(10px,1.7vh,1.7vh);
+    font-weight: bold;
     color: #000000;
+}
+
+.bg table thead tr td a.bgys{
+    font-size: clamp(10px,1.7vh,1.7vh);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.021);
+    color:rgb(255, 2, 56);
 }
 
 .zck{
     position: absolute;
     right: 0;
-    width: 75%;
-    height: 20vh;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     background-color: rgba(228, 184, 213, 0.5);
     box-shadow: 2px 2px 2px #c7c7c7;
+    clip-path: polygon(25% 0,25% 54%,0 54%,0 100%,100% 100%,100% 0);
+}
+
+.dwz{
+    font-size: clamp(10px,1.7vh,1.7vh);
+
 }
