@@ -446,7 +446,19 @@ header{
         height: 20vh;
     }
 
+    .bg table thead tr td{
+        position: relative;
+    }
+
     .bg table thead tr td a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: clamp(10px,1.7vh,1.7vh);
         font-weight: bold;
         color: #000000;
@@ -455,7 +467,7 @@ header{
     .bg table thead tr td a.bgys{
         font-size: clamp(10px,1.7vh,1.7vh);
         font-weight: bold;
-        background-color: rgba(0, 0, 0, 0.021);
+        background-color: rgba(168, 168, 168, 0.177);
         color:rgb(255, 2, 56);
     }
 
@@ -563,7 +575,19 @@ header{
         height: 20vh;
     }
 
+    .bg table thead tr td{
+        position: relative;
+    }
+
     .bg table thead tr td a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: clamp(10px,2vh,2vh);
         font-weight: bold;
         color: #000000;
