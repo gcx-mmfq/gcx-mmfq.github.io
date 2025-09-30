@@ -23,8 +23,6 @@ body{
     box-sizing: border-box;
     position: relative;
     min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
     background:
 	repeating-linear-gradient(
 		transparent,
@@ -77,6 +75,7 @@ header{
     width: 100%;
 }
 
+/* 手机 */
 @media (max-width:767px){
     .xinghai{
         width: 100%;
@@ -86,29 +85,7 @@ header{
         background-position: center;
         mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
     }
-}
 
-@media (min-width:768px) and (max-width:1199px){
-    .xinghai{
-        width: 100%;
-        height: auto;
-        background-image:url("../img/星海.jpg");
-        min-height: 560px;
-        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
-    }
-}
-
-@media (min-width:1200px){
-    .xinghai{
-        width: 100%;
-        height: auto;
-        background-image:url("../img/星海.jpg");
-        min-height: 770px;
-        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
-    }
-}
-
-@media (max-width:767px){
     .tou{
         background-color: rgba(255, 255, 255, 0.1);
         position: absolute;
@@ -118,135 +95,34 @@ header{
         width: 50%;
         height: 50px;
     }
-}
 
-@media (min-width:768px) and (max-width:1199px){
-    .tou{
-        background-color: black;
-        position: absolute;
-        top: 14%;
-        left: 25%;
-        width: 50%;
-        height: 100px;
-    }
-}
-
-@media (min-width:1200px){
-    .tou{
-        background-color: black;
-        position: absolute;
-        top: 24%;
-        left: 25%;
-        width: 50%;
-        height: 100px;
-    }
-}
-
-/* za-world */
-.za-world{
-    color: #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-@media (max-width:767px){
     .za-world{
         position: absolute;
-        top: 20vh;
+        top: 19vh;
         left: 50%;
         transform: translateX(-50%);
         height: auto;
         border-radius: 10px;
-        font-size: 16px;
+        font-size: clamp(20px,2vh,16px);
         font-weight: bold;
         text-shadow: 2px 2px 1px #807d7d;
     }
-}
 
-@media (min-width:768px) and (max-width:1199px){
-    .za-world{
-        position: absolute;
-        top: 28%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: auto;
-        border-radius: 10px;
-        font-size: 30px;
-        font-weight: bold;
-        text-shadow: 2px 2px 1px #807d7d;
-    }
-}
-
-@media (min-width:1200px){
-    .za-world{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: auto;
-        border-radius: 10px;
-        font-size: 40px;
-        font-weight: bold;
-        text-shadow: 2px 2px 1px #807d7d;
-    }
-}
-
-.xcl{
-    color: black;
-    font-size: 30px;
-}
-
-@media (max-width:767px){
     .xcl{
         position: absolute;
         top: 12vh;
         left: 50%;
         transform: translateX(-50%);
+        margin: auto 0;
         height: 50px;
         line-height: 50px;
+        color: black;
         font-weight: bold;
-        margin: auto 0;
-        font-size: 30px;
+        font-size: clamp(20px,3vh,30px);
         font-family: KaiTi;
         text-shadow: 1px 1px 0.5px #FFF;
     }
-}
 
-@media (min-width:768px) and (max-width:1199px){
-    .xcl{
-        position: absolute;
-        top: 23%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 70px;
-        line-height: 70px;
-        font-weight: bold;
-        margin: auto 0;
-        font-size: 44px;
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #FFF;
-    }
-}
-
-@media (min-width:1200px){
-    .xcl{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100px;
-        line-height: 100px;
-        font-weight: bold;
-        margin: auto 0;
-        font-size: 64px;
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #FFF;
-    }
-}
-
-@media (max-width:767px){
     .jlsr{
         position: absolute;
         top: 23vh;
@@ -256,34 +132,7 @@ header{
         font-family: KaiTi;
         text-shadow: 1px 1px 0.5px #6e6e6e;
     }
-}
 
-@media (min-width:768px) and (max-width:1199px){
-    .jlsr{
-        position: absolute;
-        top: 33%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: clamp(10px,2em,30px);
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #6e6e6e;
-    }
-}
-
-@media (min-width:1200px){
-    .jlsr{
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: clamp(10px,2em,30px);
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #6e6e6e;
-    }
-}
-
-
-@media (max-width:767px){
     .body{
         position: absolute;
         top: 27vh;
@@ -295,44 +144,183 @@ header{
         background-color: rgba(228, 184, 213, 0.5);
         box-shadow: 2px 2px 2px #c7c7c7;
     }
-}
 
-@media (min-width:768px) and (max-width:1199px){
-    .body{
-        position: absolute;
-        top: 38%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        min-height: 100px;
-        border-radius: 10px;
-        background-color: rgba(228, 184, 213, 0.5);
-        box-shadow: 2px 2px 2px #c7c7c7;
-    }
-}
-
-@media (min-width:1200px){
-    .body{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        min-height: 100px;
-        border-radius: 10px;
-        background-color: rgba(228, 184, 213, 0.5);
-        box-shadow: 2px 2px 2px #c7c7c7;
-    }
-}
-@media (max-width:767px){
     #datepicker{
         border-radius: 1vh;
         border: 1px skyblue solid;
         padding: 0 0 0 4px;
-        width: 12vh;
-        height: 3vh;
+        width: 11vh;
+        height: 2vh;
         font-size: 2vh;
     }
+}
+
+
+/* 平板 */
+@media (min-width:768px) and (max-width:1199px){
+    .xinghai{
+        width: 100%;
+        height: auto;
+        background-image:url("../img/星海.jpg");
+        min-height: 560px;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+    }
+
+    .tou{
+        background-color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 100px;
+    }
+
+    .za-world{
+        position: absolute;
+        top: 27vh;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        border-radius: 10px;
+        font-size: clamp(20px,3vh,30px);
+        font-weight: bold;
+        text-shadow: 2px 2px 1px #807d7d;
+    }
+
+    .xcl{
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto 0;
+        height: 50px;
+        line-height: 50px;
+        color: black;
+        font-weight: bold;
+        font-size: clamp(20px,4vh,50px);
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #FFF;
+    }
+
+    .jlsr{
+        position: absolute;
+        top: 32vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: clamp(20px,2vh,28px);
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #6e6e6e;
+    }
+
+    .body{
+        position: absolute;
+        top: 36vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        min-height: 110px;
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
+    }
+
+    #datepicker{
+        border-radius: 1vh;
+        border: 1px skyblue solid;
+        padding: 0 0 0 4px;
+        width: 11vh;
+        height: 2vh;
+        font-size: 2vh;
+    }
+}
+
+/* 电脑 */
+@media (min-width:1200px){
+    .xinghai{
+        width: 100%;
+        height: auto;
+        background-image:url("../img/星海.jpg");
+        min-height: 770px;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+    }
+
+    .tou{
+        background-color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 18vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 100px;
+    }
+
+    .za-world{
+        position: absolute;
+        top: 48vh;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        border-radius: 10px;
+        font-size: clamp(20px,4vh,40px);
+        font-weight: bold;
+        text-shadow: 2px 2px 1px #807d7d;
+    }
+
+    .xcl{
+        position: absolute;
+        top: 37vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto 0;
+        height: 50px;
+        line-height: 50px;
+        color: black;
+        font-weight: bold;
+        font-size: clamp(20px,6vh,70px);
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #FFF;
+    }
+
+    .jlsr{
+        position: absolute;
+        top: 56vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: clamp(20px,3vh,30px);
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #6e6e6e;
+    }
+
+    .body{
+        position: absolute;
+        top: 63vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        min-height: 110px;
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
+    }
+
+    #datepicker{
+        border-radius: 1vh;
+        border: 1px skyblue solid;
+        padding: 0 0 0 4px;
+        width: 11vh;
+        height: 2vh;
+        font-size: 2vh;
+    }
+}
+
+/* za-world */
+.za-world{
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .ui-datepicker {
@@ -407,80 +395,381 @@ header{
     font-size: clamp(15px,2vh,25px);
 }
 
-.tongzhik{
-    margin: 5px 10px 3px 10px;
-    font-size: clamp(15px,3vh,25px);
-    white-space: pre-line; 
+
+@media (max-width:767px){
+    .tongzhik{
+        margin: 5px 10px 3px 10px;
+        font-size: clamp(15px,3vh,25px);
+        white-space: pre-line; 
+    }
+
+    .tongzhik.holiday{
+        font-family: 华文行楷;
+        font-size: 3vh;
+        text-shadow: 1px 1px 1px #ffffff;
+        white-space: pre-line; 
+    }
+
+    .tongzhik.birthday{
+        background-image: linear-gradient(to right, #c03d3d , #ff0055);
+        color: transparent;
+        background-clip: text;
+        font-family: 华文行楷;
+        font-size: 3vh;
+        white-space: pre-line; 
+    }
+
+    .tzck{
+        position: absolute;
+        top: 40vh;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        width: 80%;
+        height: 40vh;
+    }
+
+    .bg{
+        position: absolute;
+        width: 20%;
+        height: 20vh;
+        border-radius: 10px 0 0 0;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
+    }
+
+    .bg table{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 20vh;
+    }
+
+    .bg table thead tr td a{
+        font-size: clamp(10px,1.7vh,1.7vh);
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .bg table thead tr td a.bgys{
+        font-size: clamp(10px,1.7vh,1.7vh);
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.021);
+        color:rgb(255, 2, 56);
+    }
+
+    .zck{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        clip-path: polygon(25% 0,25% 54%,0 54%,0 100%,100% 100%,100% 0);
+    }
+
+    .zck::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 2px;
+        bottom: 2px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px #c7c7c7;
+        z-index: -1;
+    }
+
+    .img1{
+        float:right;
+        width: 8vh;
+        border-radius: 10px;
+        margin:0 0 0.5vh 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+
+    .img2{
+        float:right;
+        clear:right;
+        width: 8vh;
+        border-radius: 10px;
+        margin: 0 0 0 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+
+    .img3{
+        float:right;
+        width: 15vh;
+        border-radius: 10px;
+        margin:0 1vh 0 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+    
+    .dwz{
+        float: right;
+        font-size: clamp(10px,1.7vh,1.7vh);
+    }
+
 }
 
-.tongzhik.holiday{
-    font-family: 华文行楷;
-    font-size: 3vh;
-    text-shadow: 1px 1px 1px #ffffff;
-    white-space: pre-line; 
+@media (min-width:768px) and (max-width:1190px){
+    .tongzhik{
+        margin: 5px 10px 3px 10px;
+        font-size: clamp(15px,2.9vh,2.9vh);
+        white-space: pre-line; 
+    }
+    
+    .tongzhik.holiday{
+        font-family: 华文行楷;
+        font-size: 2.9vh;
+        text-shadow: 1px 1px 1px #ffffff;
+        white-space: pre-line; 
+    }
+    
+    .tongzhik.birthday{
+        background-image: linear-gradient(to right, #c03d3d , #ff0055);
+        color: transparent;
+        background-clip: text;
+        font-family: 华文行楷;
+        font-size: 2.9vh;
+        white-space: pre-line; 
+    }
+
+    .tzck{
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        width: 80%;
+        height: 40vh;
+    }
+
+    .bg{
+        position: absolute;
+        width: 20%;
+        height: 20vh;
+        border-radius: 10px 0 0 0;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
+    }
+
+    .bg table{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 20vh;
+    }
+
+    .bg table thead tr td a{
+        font-size: clamp(10px,2vh,2vh);
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .bg table thead tr td a.bgys{
+        font-size: clamp(10px,2vh,2vh);
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.021);
+        color:rgb(255, 2, 56);
+    }
+
+    .zck{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        clip-path: polygon(25% 0,25% 55%,0 55%,0 100%,100% 100%,100% 0);
+    }
+
+    .zck::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 2px;
+        bottom: 2px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px #c7c7c7;
+        z-index: -1;
+    }
+
+    .img1{
+        float:right;
+        width: 9vh;
+        border-radius: 10px;
+        margin:0 0 0.5vh 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+
+    .img2{
+        float:right;
+        clear:right;
+        width: 8vh;
+        border-radius: 10px;
+        margin: 0 0 0 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+
+    .img3{
+        float:right;
+        width: 20vh;
+        border-radius: 10px;
+        margin:0 1vh 0 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+    
+    .dwz{
+        float: right;
+        font-size: clamp(10px,2vh,2vh);
+    }
 }
 
-.tongzhik.birthday{
-    background-image: linear-gradient(to right, #c03d3d , #ff0055);
-    color: transparent;
-    background-clip: text;
-    font-family: 华文行楷;
-    font-size: 3vh;
-    white-space: pre-line; 
+@media (min-width:1200px){
+    .tongzhik{
+        margin: 5px 10px 3px 10px;
+        font-size: clamp(15px,3vh,30px);
+        white-space: pre-line; 
+    }
+
+    .tongzhik.holiday{
+        font-family: 华文行楷;
+        font-size: 3vh;
+        text-shadow: 1px 1px 1px #ffffff;
+        white-space: pre-line; 
+    }
+
+    .tongzhik.birthday{
+        background-image: linear-gradient(to right, #c03d3d , #ff0055);
+        color: transparent;
+        background-clip: text;
+        font-family: 华文行楷;
+        font-size: 3vh;
+        white-space: pre-line; 
+    }
+
+    .tzck{
+        position: absolute;
+        top: 78vh;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        width: 80%;
+        height: 40vh;
+    }
+
+    .bg{
+        position: absolute;
+        width: 20%;
+        height: 20vh;
+        border-radius: 10px 0 0 0;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
+    }
+
+    .bg table{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 20vh;
+    }
+
+    .bg table thead tr td{
+        position: relative;
+    }
+
+    .bg table thead tr td a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(10px,1.8vh,1.8vh);
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .bg table thead tr td a:hover{
+        cursor: pointer;
+        color:rgb(255, 2, 56);
+        background-color: rgba(168, 168, 168, 0.177);
+    }
+
+    .bg table thead tr td a.bgys{
+        font-size: clamp(10px,1.8vh,1.8vh);
+        font-weight: bold;
+        background-color: rgba(168, 168, 168, 0.177);
+        color:rgb(255, 2, 56);
+    }
+
+    .zck{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        clip-path: polygon(23% 0,23% 60%,0 60%,0 100%,100% 100%,100% 0);
+    }
+
+    .zck::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 2px;
+        bottom: 2px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px #c7c7c7;
+        z-index: -1;
+    }
+
+    .img1{
+        float:right;
+        width: 15vh;
+        border-radius: 10px;
+        margin:0 0 1vh 1vh;
+        box-shadow: 1px 1px 2px #424242;
+    }
+
+    .img2{
+        float:right;
+        width: 10vh;
+        border-radius: 10px;
+        margin: 0 0 0 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+
+    .img3{
+        float:right;
+        width: 20vh;
+        border-radius: 10px;
+        margin:0 1vh 0 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+    
+    .img4{
+        float: right;
+    }
+
+    .img5{
+        float: right;
+    }
+
+    .dwz{
+        float: right;
+        font-size: clamp(10px,1.7vh,1.7vh);
+    }
 }
 
-.tzck{
-    position: absolute;
-    top: 40vh;
-    left: 50%;
-    transform: translateX(-50%);
+.bottom-dh{
     display: flex;
-    width: 80%;
-    height: 40vh;
-}
-
-.bg{
-    position: absolute;
-    width: 20%;
-    height: 20vh;
-    border-radius: 10px 0 0 0;
-    background-color: rgba(228, 184, 213, 0.5);
-    box-shadow: 2px 2px 2px #c7c7c7;
-}
-
-.bg table{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 20vh;
-}
-
-.bg table thead tr td a{
-    font-size: clamp(10px,1.7vh,1.7vh);
-    font-weight: bold;
-    color: #000000;
-}
-
-.bg table thead tr td a.bgys{
-    font-size: clamp(10px,1.7vh,1.7vh);
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.021);
-    color:rgb(255, 2, 56);
-}
-
-.zck{
-    position: absolute;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-color: rgba(228, 184, 213, 0.5);
-    box-shadow: 2px 2px 2px #c7c7c7;
-    clip-path: polygon(25% 0,25% 54%,0 54%,0 100%,100% 100%,100% 0);
-}
-
-.dwz{
-    font-size: clamp(10px,1.7vh,1.7vh);
-
 }
