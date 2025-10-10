@@ -5,57 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="icon" href="./img/标签图标.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <title>哦~</title>
 </head>
+
 <body>
-    <header>
-        <div class="xinghai"></div>
-        <div class="tou"></div>
-    </header>
-    <p class="xcl">我们相处了:</p>
-    <div class="za-world">
-        <span class="years">0</span>年
-        <span class="month">0</span>月
-        <span class="day">0</span>日
-        <span class="hours">0</span>时
-        <span class="minutes">0</span>分
-        <span class="seconds">0</span>秒
-    </div>
-    <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
-    <div class="body">
-        <p class="rili">日历:<input type="text" id="datepicker" readonly></p>
-        <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
-    </div>
-    <div class="tzck">
-
-        <div class="bg">
-            <table>
-                <thead>
-                    <tr>
-                        <td><a href="">杜地照片</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">顾地照片</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">3</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">4</a></td>
-                    </tr>
-                </thead>
-            </table>
+    <div id="home" class="page">
+        <header>
+            <div class="xinghai"></div>
+            <div class="tou"></div>
+        </header>
+        <p class="xcl">我们相处了:</p>
+        <div class="za-world">
+            <span class="years">0</span>年
+            <span class="month">0</span>月
+            <span class="day">0</span>日
+            <span class="hours">0</span>时
+            <span class="minutes">0</span>分
+            <span class="seconds">0</span>秒
         </div>
+        <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
+        <div class="body">
+            <p class="rili">日历:<input type="text" id="datepicker" readonly></p>
+            <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
+        </div>
+        <div class="tzck">
 
-        <div class="zck">
-            
+            <div class="bg">
+                <table>
+                    <thead>
+                        <tr>
+                            <td><a href="">杜地照片</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">顾地照片</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">3</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">4</a></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="zck">
+
+            </div>
         </div>
     </div>
+
+    <div id="sdf" class="page" style="display: none;">
+    </div>
+    <div id="ghj" class="page" style="display: none;">
+    </div>
+    <div id="zxc" class="page" style="display: none;">
+    </div>
+
     <div class="bottom-dh">
-        <div></div>
-        <div></div>
+        <table>
+            <tr>
+                <td onclick="showPage('home')">
+                    <img src="./img/图标.png">
+                    <p>首页</p>
+                </td>
+                <td onclick="showPage('sdf')">
+                    <img src="./img/图标.png">
+                    <p>sdf</p>
+                </td>
+                <td onclick="showPage('ghj')">
+                    <img src="./img/图标.png">
+                    <p>ghj</p>
+                </td>
+                <td onclick="showPage('zxc')">
+                    <img src="./img/图标.png">
+                    <p>zxc</p>
+                </td>
+            </tr>
+        </table>
     </div>
     
 </body>
@@ -198,7 +228,7 @@
         $datepicker.val(formattedToday);
 
         const LinkContents ={
-            "杜地照片":'<div style="float:right"><img src="./img/我来啦.jpg" class="img1"><img src="./img/我真的会蟹.jpg" class="img2"></div><img src="./img/()就多().jpg" class="img3"><img src="./img/中指" class="img4"><img src="./img/小初升.jpg" class="img5"><img src="./img/cosplay.jpg" class="img4"><p class="dwz">阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>',
+            "杜地照片":'<div style="float:right"><img src="./img/我来啦.jpg" class="img1"><img src="./img/我真的会蟹.jpg" class="img2"></div>  <div class="lst"><img src="./img/()就多().jpg" class="img3"> <div class="jt"></div> <img src="./img/中指" class="img4"><img src="./img/小初升.jpg" class="img5"><img src="./img/cosplay.jpg" class="img4"></div><p class="dwz">阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>',
             "顾地照片":"2",
             "3":"3",
             "4":"4"
@@ -212,9 +242,13 @@
             const content = LinkContents[linkText]
             $('.zck').html(`<div style="padding:10px">${content}</div>`)
         })
-
-        
-
     });
+
+    function showPage(pageid){
+        document.querySelectorAll(".page").forEach(page => {
+            page.style.display = 'none';
+        })
+        document.getElementById(pageid).style.display = 'block';
+    }
 </script>
 </html>
