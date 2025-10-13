@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="icon" href="./img/标签图标.png" type="image/x-icon">
+    <link rel="icon" href="./img/标签图片.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <title>哦~</title>
+    <title>南北绿豆</title>
 </head>
 
 <body>
@@ -32,7 +32,6 @@
             <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
         </div>
         <div class="tzck">
-
             <div class="bg">
                 <table>
                     <thead>
@@ -86,6 +85,10 @@
                 </td>
             </tr>
         </table>
+    </div>
+
+    <div class="huiding">
+        <img src="" alt="">
     </div>
     
 </body>
@@ -249,6 +252,16 @@
             page.style.display = 'none';
         })
         document.getElementById(pageid).style.display = 'block';
+    }
+
+    window.onscroll=function(){
+        let huiding=document.querySelector(".huiding")
+        if(window.scrollY>150){
+            huiding.style.display="block"
+        }
+        else{
+            huiding.style.display="none"
+        }
     }
 </script>
 </html>
