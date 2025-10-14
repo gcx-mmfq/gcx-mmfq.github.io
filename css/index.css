@@ -1,9 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
 }
-
-
 
 p{
     font-family: 微软雅黑;
@@ -83,6 +85,161 @@ header{
 @media (max-width:767px){
     .xinghai{
         width: 100%;
+        height: 26vh;
+        background-image:url("../img/星海.jpg");
+        background-size: cover;
+        background-position: center;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+    }
+
+    .tou{
+        background-color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 50px;
+    }
+
+    .za-world{
+        position: absolute;
+        top: 18vh;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        border-radius: 10px;
+        font-size: 2vh;
+        font-weight: bold;
+        text-shadow: 2px 2px 1px #807d7d;
+    }
+
+    .xcl{
+        position: absolute;
+        top: 12vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto 0;
+        height: 50px;
+        line-height: 50px;
+        color: black;
+        font-weight: bold;
+        font-size: 3vh;
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #FFF;
+    }
+
+    .jlsr{
+        position: absolute;
+        top: 21vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5vh;
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #6e6e6e;
+    }
+
+    .body{
+        margin: 0 auto;
+        width: 80%;
+        min-height: 100px;
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
+    }
+
+    #datepicker{
+        border-radius: 1vh;
+        border: 1px skyblue solid;
+        padding: 0 0 0 4px;
+        width: 11vh;
+        height: 2vh;
+        font-size: 2vh;
+    }
+}
+
+
+/* 平板 */
+@media (min-width:768px) and (max-width:1199px){
+    .xinghai{
+        width: 100%;
+        height: 30vh;
+        background-image:url("../img/星海.jpg");
+        background-size: cover;
+        background-position: center;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
+    }
+
+    .tou{
+        background-color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 9vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 50px;
+    }
+
+    .za-world{
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        border-radius: 10px;
+        font-size: 2.2vh;
+        font-weight: bold;
+        text-shadow: 2px 2px 1px #807d7d;
+    }
+
+    .xcl{
+        position: absolute;
+        top: 15vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto 0;
+        height: 50px;
+        line-height: 50px;
+        color: black;
+        font-weight: bold;
+        font-size: 3vh;
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #FFF;
+    }
+
+    .jlsr{
+        position: absolute;
+        top: 23vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.7vh;
+        font-family: KaiTi;
+        text-shadow: 1px 1px 0.5px #6e6e6e;
+    }
+
+    .body{
+        margin: 0 auto;
+        width: 80%;
+        min-height: 120px;
+        border-radius: 10px;
+        background-color: rgba(228, 184, 213, 0.5);
+        box-shadow: 2px 2px 2px #c7c7c7;
+    }
+
+    #datepicker{
+        border-radius: 1vh;
+        border: 1px skyblue solid;
+        padding: 0 0 0 4px;
+        width: 11vh;
+        height: 2vh;
+        font-size: 2vh;
+    }
+}
+
+/* 电脑 */
+@media (min-width:1200px){
+    .xinghai{
+        width: 100%;
         height: 30vh;
         background-image:url("../img/星海.jpg");
         background-size: cover;
@@ -138,171 +295,9 @@ header{
     }
 
     .body{
-        position: absolute;
-        top: 27vh;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
         width: 80%;
         min-height: 100px;
-        border-radius: 10px;
-        background-color: rgba(228, 184, 213, 0.5);
-        box-shadow: 2px 2px 2px #c7c7c7;
-    }
-
-    #datepicker{
-        border-radius: 1vh;
-        border: 1px skyblue solid;
-        padding: 0 0 0 4px;
-        width: 11vh;
-        height: 2vh;
-        font-size: 2vh;
-    }
-}
-
-
-/* 平板 */
-@media (min-width:768px) and (max-width:1199px){
-    .xinghai{
-        width: 100%;
-        height: auto;
-        background-image:url("../img/星海.jpg");
-        min-height: 560px;
-        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
-    }
-
-    .tou{
-        background-color: rgba(255, 255, 255, 0.1);
-        position: absolute;
-        top: 10vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        height: 100px;
-    }
-
-    .za-world{
-        position: absolute;
-        top: 27vh;
-        left: 50%;
-        transform: translateX(-50%);
-        height: auto;
-        border-radius: 10px;
-        font-size: clamp(20px,3vh,30px);
-        font-weight: bold;
-        text-shadow: 2px 2px 1px #807d7d;
-    }
-
-    .xcl{
-        position: absolute;
-        top: 20vh;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: auto 0;
-        height: 50px;
-        line-height: 50px;
-        color: black;
-        font-weight: bold;
-        font-size: clamp(20px,4vh,50px);
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #FFF;
-    }
-
-    .jlsr{
-        position: absolute;
-        top: 32vh;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: clamp(20px,2vh,28px);
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #6e6e6e;
-    }
-
-    .body{
-        position: absolute;
-        top: 36vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        min-height: 110px;
-        border-radius: 10px;
-        background-color: rgba(228, 184, 213, 0.5);
-        box-shadow: 2px 2px 2px #c7c7c7;
-    }
-
-    #datepicker{
-        border-radius: 1vh;
-        border: 1px skyblue solid;
-        padding: 0 0 0 4px;
-        width: 11vh;
-        height: 2vh;
-        font-size: 2vh;
-    }
-}
-
-/* 电脑 */
-@media (min-width:1200px){
-    .xinghai{
-        width: 100%;
-        height: auto;
-        background-image:url("../img/星海.jpg");
-        min-height: 770px;
-        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 80%);
-    }
-
-    .tou{
-        background-color: rgba(255, 255, 255, 0.1);
-        position: absolute;
-        top: 18vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        height: 100px;
-    }
-
-    .za-world{
-        position: absolute;
-        top: 48vh;
-        left: 50%;
-        transform: translateX(-50%);
-        height: auto;
-        border-radius: 10px;
-        font-size: clamp(20px,4vh,40px);
-        font-weight: bold;
-        text-shadow: 2px 2px 1px #807d7d;
-    }
-
-    .xcl{
-        position: absolute;
-        top: 37vh;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: auto 0;
-        height: 50px;
-        line-height: 50px;
-        color: black;
-        font-weight: bold;
-        font-size: clamp(20px,6vh,70px);
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #FFF;
-    }
-
-    .jlsr{
-        position: absolute;
-        top: 56vh;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: clamp(20px,3vh,30px);
-        font-family: KaiTi;
-        text-shadow: 1px 1px 0.5px #6e6e6e;
-    }
-
-    .body{
-        position: absolute;
-        top: 63vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        min-height: 110px;
         border-radius: 10px;
         background-color: rgba(228, 184, 213, 0.5);
         box-shadow: 2px 2px 2px #c7c7c7;
@@ -332,11 +327,11 @@ header{
     border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 10px;
-    position: absolute !important;
+    position: absolute;
     z-index: 1000 !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    margin-top: 10px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
 }
 
 /* 月份标题 */
@@ -397,13 +392,14 @@ header{
 .rili{
     margin: 3px 0 0 0;
     font-size: clamp(15px,2vh,25px);
+    z-index: 1000;
 }
 
 
 @media (max-width:767px){
     .tongzhik{
         margin: 5px 10px 3px 10px;
-        font-size: clamp(15px,3vh,25px);
+        font-size: 2.5vh;
         white-space: pre-line; 
     }
 
@@ -424,17 +420,13 @@ header{
     }
 
     .tzck{
-        position: absolute;
-        top: 40vh;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
         display: flex;
         width: 80%;
         height: 40vh;
     }
 
     .bg{
-        position: absolute;
         width: 20%;
         height: 20vh;
         border-radius: 10px 0 0 0;
@@ -443,33 +435,21 @@ header{
     }
 
     .bg table{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         width: 100%;
         height: 20vh;
     }
 
-    .bg table thead tr td{
-        position: relative;
-    }
-
     .bg table thead tr td a{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: clamp(10px,1.7vh,1.7vh);
+        font-size: 1.7vh;
         font-weight: bold;
         color: #000000;
     }
 
     .bg table thead tr td a.bgys{
-        font-size: clamp(10px,1.7vh,1.7vh);
+        font-size: 1.7vh;
         font-weight: bold;
         background-color: rgba(168, 168, 168, 0.177);
         color:rgb(255, 2, 56);
@@ -477,8 +457,8 @@ header{
 
     .zck{
         position: absolute;
-        right: 0;
-        width: 100%;
+        left: 10vw;
+        width: 80vw;
         height: 100%;
         border-radius: 10px;
         background-color: rgba(228, 184, 213, 0.5);
@@ -548,13 +528,71 @@ header{
 
     .lst{
         overflow: hidden;
-        
     }
-
     
     .dwz{
         float: right;
         font-size: clamp(10px,1.7vh,1.7vh);
+    }
+
+    .bottom-dh{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 6vh;
+        width: 100vw;
+    }
+
+    .bottom-dh table{
+        width: 100%;
+    }
+
+    .bottom-dh table td{
+        background-color: white;
+        width: 25%;
+    }
+
+    .bottom-dh img{
+        display: block;
+        margin: 0 auto;
+        width: 7vw;
+    }
+
+    .bottom-dh p{
+        font-size: 1.3vh;
+    }
+
+    .huiding{
+        display: none;
+        position: fixed;
+        right: 5vw;
+        bottom: 10vh;
+        border-radius: 5vw;
+        background-color: black;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .clickeff{
+        position: fixed;
+        pointer-events: none;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: clickeffect 0.5s ease-in;
+        z-index:100;
+    }
+
+    @keyframes clickeffect {
+        0%{
+            transform: scale(0);
+            opacity: 1;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 0;
+        }
     }
 
 }
@@ -562,38 +600,34 @@ header{
 @media (min-width:768px) and (max-width:1190px){
     .tongzhik{
         margin: 5px 10px 3px 10px;
-        font-size: clamp(15px,2.9vh,2.9vh);
+        font-size: 2.6vh;
         white-space: pre-line; 
     }
-    
+
     .tongzhik.holiday{
         font-family: 华文行楷;
-        font-size: 2.9vh;
+        font-size: 2.6vh;
         text-shadow: 1px 1px 1px #ffffff;
         white-space: pre-line; 
     }
-    
+
     .tongzhik.birthday{
         background-image: linear-gradient(to right, #c03d3d , #ff0055);
         color: transparent;
         background-clip: text;
         font-family: 华文行楷;
-        font-size: 2.9vh;
+        font-size: 2.6vh;
         white-space: pre-line; 
     }
 
     .tzck{
-        position: absolute;
-        top: 50vh;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
         display: flex;
         width: 80%;
         height: 40vh;
     }
 
     .bg{
-        position: absolute;
         width: 20%;
         height: 20vh;
         border-radius: 10px 0 0 0;
@@ -602,46 +636,34 @@ header{
     }
 
     .bg table{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         width: 100%;
         height: 20vh;
     }
 
-    .bg table thead tr td{
-        position: relative;
-    }
-
     .bg table thead tr td a{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: clamp(10px,2vh,2vh);
+        font-size: 2.2vh;
         font-weight: bold;
         color: #000000;
     }
 
     .bg table thead tr td a.bgys{
-        font-size: clamp(10px,2vh,2vh);
+        font-size: 2.2vh;
         font-weight: bold;
-        background-color: rgba(0, 0, 0, 0.021);
+        background-color: rgba(168, 168, 168, 0.177);
         color:rgb(255, 2, 56);
     }
 
     .zck{
         position: absolute;
-        right: 0;
-        width: 100%;
+        left: 10vw;
+        width: 80vw;
         height: 100%;
         border-radius: 10px;
         background-color: rgba(228, 184, 213, 0.5);
-        clip-path: polygon(25% 0,25% 55%,0 55%,0 100%,100% 100%,100% 0);
+        clip-path: polygon(25% 0,25% 54%,0 54%,0 100%,100% 100%,100% 0);
     }
 
     .zck::after{
@@ -658,7 +680,7 @@ header{
 
     .img1{
         float:right;
-        width: 9vh;
+        width: 8vh;
         border-radius: 10px;
         margin:0 0 0.5vh 0;
         box-shadow: 1px 1px 2px #424242;
@@ -675,7 +697,7 @@ header{
 
     .img3{
         float:right;
-        width: 20vh;
+        width: 15vh;
         border-radius: 10px;
         margin:0 1vh 0 0;
         box-shadow: 1px 1px 2px #424242;
@@ -683,7 +705,7 @@ header{
 
     .img4{
         float:right;
-        width: 4vh;
+        width: 5vh;
         border-radius: 10px;
         margin:0 1vh 0 0;
         box-shadow: 1px 1px 2px #424242;
@@ -691,7 +713,7 @@ header{
 
     .img5{
         float:right;
-        width: 4vh;
+        width: 5vh;
         border-radius: 10px;
         margin:0 1vh 0 0;
         box-shadow: 1px 1px 2px #424242;
@@ -699,22 +721,66 @@ header{
 
     .img6{
         float:right;
-        width: 4vh;
+        width: 5vh;
         border-radius: 10px;
         margin:0 1vh 0 0;
         box-shadow: 1px 1px 2px #424242;
     }
+
+    .lst{
+        overflow: hidden;
+    }
     
     .dwz{
         float: right;
-        font-size: clamp(10px,2vh,2vh);
+        font-size: clamp(10px,1.7vh,1.7vh);
+    }
+
+    .bottom-dh{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 6vh;
+        width: 100vw;
+    }
+
+    .bottom-dh table{
+        width: 100%;
+    }
+
+    .bottom-dh table td{
+        background-color: white;
+        width: 25%;
+    }
+
+    .bottom-dh img{
+        display: block;
+        margin: 0 auto;
+        width: 5vw;
+    }
+
+    .bottom-dh p{
+        font-size: 1.6vh;
+    }
+
+    .huiding{
+        display: block;
+        position: fixed;
+        right: 5vw; 
+        bottom: 10vh;
+        border-radius: 5vw;
+        background-color: black;
+        width: 7vw;
+        height: 7vw;
     }
 }
 
 @media (min-width:1200px){
     .tongzhik{
         margin: 5px 10px 3px 10px;
-        font-size: clamp(15px,3vh,30px);
+        font-size: clamp(15px,3vh,25px);
         white-space: pre-line; 
     }
 
@@ -735,17 +801,13 @@ header{
     }
 
     .tzck{
-        position: absolute;
-        top: 78vh;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
         display: flex;
         width: 80%;
         height: 40vh;
     }
 
     .bg{
-        position: absolute;
         width: 20%;
         height: 20vh;
         border-radius: 10px 0 0 0;
@@ -754,39 +816,21 @@ header{
     }
 
     .bg table{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         width: 100%;
         height: 20vh;
     }
 
-    .bg table thead tr td{
-        position: relative;
-    }
-
     .bg table thead tr td a{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: clamp(10px,1.8vh,1.8vh);
+        font-size: clamp(10px,1.7vh,1.7vh);
         font-weight: bold;
         color: #000000;
     }
 
-    .bg table thead tr td a:hover{
-        cursor: pointer;
-        color:rgb(255, 2, 56);
-        background-color: rgba(168, 168, 168, 0.177);
-    }
-
     .bg table thead tr td a.bgys{
-        font-size: clamp(10px,1.8vh,1.8vh);
+        font-size: clamp(10px,1.7vh,1.7vh);
         font-weight: bold;
         background-color: rgba(168, 168, 168, 0.177);
         color:rgb(255, 2, 56);
@@ -794,12 +838,12 @@ header{
 
     .zck{
         position: absolute;
-        right: 0;
-        width: 100%;
+        left: 10vw;
+        width: 80vw;
         height: 100%;
         border-radius: 10px;
         background-color: rgba(228, 184, 213, 0.5);
-        clip-path: polygon(23% 0,23% 60%,0 60%,0 100%,100% 100%,100% 0);
+        clip-path: polygon(25% 0,25% 54%,0 54%,0 100%,100% 100%,100% 0);
     }
 
     .zck::after{
@@ -816,15 +860,16 @@ header{
 
     .img1{
         float:right;
-        width: 15vh;
+        width: 8vh;
         border-radius: 10px;
-        margin:0 0 1vh 1vh;
+        margin:0 0 0.5vh 0;
         box-shadow: 1px 1px 2px #424242;
     }
 
     .img2{
         float:right;
-        width: 10vh;
+        clear:right;
+        width: 8vh;
         border-radius: 10px;
         margin: 0 0 0 0;
         box-shadow: 1px 1px 2px #424242;
@@ -832,58 +877,84 @@ header{
 
     .img3{
         float:right;
-        width: 20vh;
+        width: 15vh;
         border-radius: 10px;
         margin:0 1vh 0 0;
         box-shadow: 1px 1px 2px #424242;
     }
-    
+
     .img4{
-        float: right;
+        float:right;
+        width: 5vh;
+        border-radius: 10px;
+        margin:0 1vh 0 0;
+        box-shadow: 1px 1px 2px #424242;
     }
 
     .img5{
-        float: right;
+        float:right;
+        width: 5vh;
+        border-radius: 10px;
+        margin:0 1vh 0 0;
+        box-shadow: 1px 1px 2px #424242;
     }
 
+    .img6{
+        float:right;
+        width: 5vh;
+        border-radius: 10px;
+        margin:0 1vh 0 0;
+        box-shadow: 1px 1px 2px #424242;
+    }
+
+    .lst{
+        overflow: hidden;
+    }
+    
     .dwz{
         float: right;
         font-size: clamp(10px,1.7vh,1.7vh);
     }
+
+    .bottom-dh{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 6vh;
+        width: 100vw;
+    }
+
+    .bottom-dh table{
+        width: 100%;
+    }
+
+    .bottom-dh table td{
+        background-color: white;
+        width: 25%;
+    }
+
+    .bottom-dh img{
+        display: block;
+        margin: 0 auto;
+        width: 7vw;
+    }
+
+    .bottom-dh p{
+        font-size: 4vw;
+    }
+
+
+    .huiding{
+        display: none;
+        position: fixed;
+        right: 5vw;
+        bottom: 10vh;
+        border-radius: 5vw;
+        background-color: black;
+        width: 10vw;
+        height: 10vw;
+    }
 }
 
-.bottom-dh{
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 6vh;
-    width: 100vw;
-}
-
-.bottom-dh table{
-    width: 100%;
-}
-
-.bottom-dh table td{
-    background-color: white;
-    width: 25%;
-}
-
-.bottom-dh img{
-    display: block;
-    margin: 0 auto;
-    width: 7vw;
-}
-
-.huiding{
-    display: none;
-    position: fixed;
-    right: 5vw;
-    bottom: 10vh;
-    border-radius: 5vw;
-    background-color: black;
-    width: 10vw;
-    height: 10vw;
-}

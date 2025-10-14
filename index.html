@@ -12,49 +12,59 @@
 </head>
 
 <body>
+    <div id="top"></div>
     <div id="home" class="page">
-        <header>
-            <div class="xinghai"></div>
-            <div class="tou"></div>
-        </header>
-        <p class="xcl">我们相处了:</p>
-        <div class="za-world">
-            <span class="years">0</span>年
-            <span class="month">0</span>月
-            <span class="day">0</span>日
-            <span class="hours">0</span>时
-            <span class="minutes">0</span>分
-            <span class="seconds">0</span>秒
-        </div>
-        <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
-        <div class="body">
-            <p class="rili">日历:<input type="text" id="datepicker" readonly></p>
-            <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
-        </div>
-        <div class="tzck">
-            <div class="bg">
-                <table>
-                    <thead>
-                        <tr>
-                            <td><a href="">杜地照片</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="">顾地照片</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="">3</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="">4</a></td>
-                        </tr>
-                    </thead>
-                </table>
+        <div style="height: 26vh;">
+            <header style="height: 26vh;">
+                <div class="xinghai"></div>
+                <div class="tou"></div>
+            </header>
+            <p class="xcl">我们相处了:</p>
+            <div class="za-world">
+                <span class="years">0</span>年
+                <span class="month">0</span>月
+                <span class="day">0</span>日
+                <span class="hours">0</span>时
+                <span class="minutes">0</span>分
+                <span class="seconds">0</span>秒
             </div>
+            <div class="jlsr">距离你的生日大约还有：<span class="sr">0</span>日</div>
+        </div>
 
-            <div class="zck">
-
+        <div style="margin-bottom: 1vh;">
+            <div class="body">
+                <p class="rili">日历:<input type="text" id="datepicker" readonly></p>
+                <p class="tongzhik">哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼哼</p>
             </div>
         </div>
+        <div style="position: relative;">
+            <div class="tzck">
+                <div class="bg">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td><a href="">杜地照片</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">顾地照片</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">3</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">4</a></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="zck">
+
+                </div>
+
+            </div>
+        </div>
+        
     </div>
 
     <div id="sdf" class="page" style="display: none;">
@@ -87,9 +97,9 @@
         </table>
     </div>
 
-    <div class="huiding">
+    <a class="huiding" href="#top">
         <img src="" alt="">
-    </div>
+    </a>
     
 </body>
 <script>
@@ -226,12 +236,26 @@
                 }
             }
         });
+        function checktoday(){
+            let today1= new Date();
+            let holiday1 = isHoliday(today1)
+            let birthday1 = isBirthday(today1)
+            const tongzhik1 = $('.tongzhik')
+            if(holiday1){
+                tongzhik1.text(`今天是${holiday1.name}！！！\n😊😊😊`).addClass("holiday")
+            }else if(birthday1){
+                tongzhik1.text(`今天是你的生日哦！！！\n🎂🎂🎂`).addClass("birthday")
+            }else{
+                tongzhik1.text(`${tongzhiwb}`)
+            }
+        }
+        checktoday()
         const today = new Date();
         const formattedToday = $.datepicker.formatDate("yy-mm-dd", today);
         $datepicker.val(formattedToday);
 
         const LinkContents ={
-            "杜地照片":'<div style="float:right"><img src="./img/我来啦.jpg" class="img1"><img src="./img/我真的会蟹.jpg" class="img2"></div>  <div class="lst"><img src="./img/()就多().jpg" class="img3"> <div class="jt"></div> <img src="./img/中指" class="img4"><img src="./img/小初升.jpg" class="img5"><img src="./img/cosplay.jpg" class="img4"></div><p class="dwz">阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>',
+            "杜地照片":'<div style="float:right"><img src="./img/我来啦.jpg" class="img1"><img src="./img/我真的会蟹.jpg" class="img2"></div>  <div class="lst"><img src="./img/()就多().jpg" class="img3"> <img src="./img/中指" class="img4"><img src="./img/小初升.jpg" class="img5"><img src="./img/cosplay.jpg" class="img4"></div><p class="dwz">阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>',
             "顾地照片":"2",
             "3":"3",
             "4":"4"
@@ -263,5 +287,20 @@
             huiding.style.display="none"
         }
     }
+
+    document.addEventListener("click",function(e){
+        const effect=document.createElement('div')
+        effect.classList.add('clickeff')
+        effect.style.width='20px'
+        effect.style.height='20px'
+        effect.style.backgroundColor='pink'
+        effect.style.border='1px solid red'
+        effect.style.left=`${e.clientX-10}px`
+        effect.style.top=`${e.clientY-10}px`
+        document.body.appendChild(effect);
+        setTimeout(() => {
+            effect.remove()
+        }, 500);
+    })
 </script>
 </html>
